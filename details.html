@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <selection id="header">
+        <a href="#"> <img src="logo12.png" alt="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a> </li>
+                <li> <a href="shop.html">Shop</a> </li>
+                <li> <a href="blog.html">Blog</a> </li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+                <li> <a href="cart.html"></a><i class="fa fa-shopping-cart" aria-hidden="true"></i> </li>
+            </ul>
+        </div>
+
+        </div>
+    </selection>
+
+    <title>Product Details</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-image">
+            <img src="a1.jpg" alt="Product" width="520px" height="550px">
+        </div>
+        <div class="product-details">
+            <h1>Cartoon Astronaut T-Shirtes</h1>
+            <p class="product-price"><b>78$</b></p>
+            <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, dolor
+                at posuere tincidunt, est magna lobortis nulla, vitae auctor felis sapien vel sapien. Praesent mollis
+                lacinia ex vitae euismod. Sed laoreet, mauris et vulputate pellentesque, purus ipsum vehicula quam, vel
+                rutrum nisi eros in magna. Nulla tempor, eros in viverra egestas, eros nisl blandit elit, ut fringilla
+                velit velit sit amet magna. Nunc ut elit id justo porttitor bibendum vel a neque. In hac habitasse
+                platea dictumst.</p>
+
+            </a>
+            <form id="cart-form" action="payment.html" method="POST">
+                <input type="hidden" name="product_name" value="Product 1">
+                <input type="hidden" name="product_price" value="10.99">
+                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        const cartForm = document.getElementById('cart-form');
+
+        cartForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const productName = document.querySelector('input[name="product_name"]').value;
+            const productPrice = document.querySelector('input[name="product_price"]').value;
+
+            localStorage.setItem('product_name', productName);
+            localStorage.setItem('product_price', productPrice);
+
+            window.location.href = 'payment.html';
+        });
+
+
+    </script>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="logo12.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Phone: </strong>+01 2222 432 / (+91) 01 2345 6789</p>
+            <p><strong>Hourse: </strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+
+
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twiter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us </a>
+        </div>
+        <div class="col">
+            <h4>My account</h4>
+            <a href="#">Sing In</a>
+            <a href="#">New Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store Or Google Play</p>
+            <div class="row">
+                <img src="app.jpg" alt="">
+                <img src="play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="pay.png" alt="">
+        </div>
+
+    </footer>
+    <div class="copyright">
+        <p>@2023 Created by : Parjon Terpollari</p>
+    </div>
+</body>
+
+</html>

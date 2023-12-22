@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <selection id="header">
+        <a href="#"> <img src="logo12.png" alt="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a> </li>
+                <li> <a href="shop.html">Shop</a> </li>
+                <li> <a href="blog.html">Blog</a> </li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+                <li> <a href="cart.html"></a><i class="fa fa-shopping-cart" aria-hidden="true"></i> </li>
+            </ul>
+        </div>
+
+        </div>
+    </selection>
+
+    <head>
+        <title>Payment Method Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Payment Method Page</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Payment Method Page</h1>
+        </header>
+        <main>
+            <form id="payment-form">
+                <h2>Select Payment Method</h2>
+                <label>
+                    <img src="mastercard1.png" alt="mastercard" width="80px" height="50px">
+                    <input type="radio" name="payment" value="mastercard">
+                </label>
+                <label>
+                    <img src="visa.png" alt="visa" width="80px" height="50px">
+                    <input type="radio" name="payment" value="visa">
+                </label>
+                <label>
+                    <img src="maestro.png" alt="maestro" width="80px" height="50px">
+                    <input type="radio" name="payment" value="maestro">
+                </label>
+                <label>
+                    <img src="paypal.png" alt="paypal" width="80px" height="50px">
+                    <input type="radio" name="paypal" value="paypal">
+                </label>
+                <h2>Enter Payment Details</h2>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required>
+                <label for="security-code">Security Code:</label>
+                <input type="text" id="security-code" name="security-code" required>
+                <input type="submit" value="Make Payment">
+            </form>
+        </main>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="logo12.png" alt="">
+                <h4>Contact</h4>
+                <p><strong>Phone: </strong>+01 2222 432 / (+91) 01 2345 6789</p>
+                <p><strong>Hourse: </strong>10:00 - 18:00, Mon - Sat</p>
+                <div class="follow">
+
+
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twiter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us </a>
+            </div>
+            <div class="col">
+                <h4>My account</h4>
+                <a href="#">Sing In</a>
+                <a href="#">New Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track my Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store Or Google Play</p>
+                <div class="row">
+                    <img src="app.jpg" alt="">
+                    <img src="play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="pay.png" alt="">
+            </div>
+            <footer>
+
+    </html>
+
+
+    <script>
+        // Get the payment form
+        var form = document.getElementById("payment-form");
+
+        // Add event listener to form submission
+        form.addEventListener("submit", function (event) {
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            // Validate the form
+            if (validateForm()) {
+                // Submit the form
+                form.submit();
+            }
+        });
+
+        // Validate the payment form
+        function validateForm() {
+            // Get the form fields
+            var cardNumber = document.getElementById("card-number").value;
+            var expiryDate = document.getElementById("expiry-date").value;
+            var securityCode = document.getElementById("security-code").value;
+
+            // Validate the card number
+            if (!cardNumber.match(/^\d{16}$/)) {
+                alert("Please enter a valid card number.");
+                return false;
+            }
+
+            // Validate the expiry date
+            if (!expiryDate.match(/^\d{2}\/\d{2}$/)) {
+                alert("Please enter a valid expiry date in the format MM/YY.");
+                return false;
+            }
+
+            // Validate the security code
+            if (!securityCode.match(/^\d{3}$/)) {
+                alert("Please enter a valid security code.");
+                return false;
+            }
+
+            // Return true if the form is valid
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>
