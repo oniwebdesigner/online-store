@@ -1,2 +1,2 @@
 # online-store
-shopoping store online with Html, Css and js
+Online shooping store with Html, Css and js
